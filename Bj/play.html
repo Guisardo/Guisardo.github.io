@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name='viewport'>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Blackjack Smart Bets</title>
+		
+		<link rel="stylesheet" href="objects/css/jquery.gritter.css"></link>
+		<link rel="stylesheet" href="objects/css/idangerous.swiper.css"></link>
+		<link rel="stylesheet" href="objects/css/dragdealer.css"></link>
+		<link rel="stylesheet" href="objects/css/styles.css"></link>
+        
+        <script type="text/javascript" src="objects/js/jquery.js"></script>
+        <script type="text/javascript" src="objects/js/json2.js"></script>
+
+</head>
+
+<body>
+<section class="butttons_container">
+   <div class="allbuttons">
+    	<button type="button" class="btn menu_click" id="addBlackjackWin" value="win 3" onclick="addLoss(-3/2);" /><img class="btn_icon" src="objects/images/blackjack.png" alt="Blackjack"></button>
+    	<button type="button" class="btn menu_click" id="addDoubleWin" value="win 2" onclick="addLoss(-2);" /><img class="btn_icon" src="objects/images/win_doble.png" alt="Doble win"></button> 
+    	<button type="button" class="btn menu_click" id="addWin" value="win" onclick="addLoss(-1);" /><img class="btn_icon" src="objects/images/win.png" alt="Win"></button> 
+    	<button type="button" class="btn menu_click" id="addTie" value="tie" onclick="addLoss(0);" /><img class="btn_icon" src="objects/images/tie.png" alt="Tie"></button> 
+    	<button type="button" class="btn menu_click" id="addLoss" value="loss" onclick="addLoss(1);" /><img class="btn_icon" src="objects/images/loose.png" alt="Loose"></button> 
+    	<button type="button" class="btn menu_click" id="addDoubleLoss" value="d. loss" onclick="addLoss(2);" /><img class="btn_icon" src="objects/images/loose_doble.png" alt="Doble loose"></button> 
+    	<button type="button" class="btn menu_click" id="addHalfLoss" value="surr" onclick="addLoss(0.5);" /><img class="btn_icon" src="objects/images/surrender.png" alt="Surrender"></button> 
+    	<button type="button" class="btn menu_click" id="undo" value="undo" onclick="undo();" /><img class="btn_icon" src="objects/images/undo.png" alt="Undo"></button>
+  	  	<button type="button" class="btn menu_click" id="tip" value="tip ;)"
+    onclick="location.href = &#39;http://tipcodes.com/sites/all/modules/tipcodes/pay/?id=557&#39;;" /><img class="btn_icon" src="objects/images/tips.png" alt="tip ;)"><span></span></button>
+    </div>
+</section>
+  
+<section class="play">
+		<div class="header_container">  
+			<div class="play_header">
+  				<a class="back_home" href="index.html" class=""></a> 
+  				<div class="next_bet_container"><span id="next_bet">123</span><i class="next_bet_icon"></i></div>	
+  				<div id="actions"></div>
+  			</div>
+  			<div id="ticker">
+				<div class="maxLoss_container"><span id="maxLoss">123</span><i class="max_loss_icon"></i></div>
+  				<div class="totalLoss_container"><span id="totalLoss">123</span><i class="total_loss_icon"></i></div>
+				<div class="range_container">
+				<div id="currBet-slider" class="dragdealer">
+  <div class="handle red-bar"></div>
+</div>
+<span id="txtMinBet">5</span><input type="range" id="currLoss" name="points" min="5" max="50" onchange="drawLosses();" style="display: none;" /><span id="txtMaxBet">50</span></div>
+ 	 		</div>
+ 	 	</div>	
+    	<div id="strategema" class="scroll_box bjbscalc">
+			<div id="lossGraph"></div>
+        	<div id="strategy" class="swiper-container"><div class="swiper-wrapper"></div></div>
+    	</div>
+    </div>
+</section>
+  
+<div id="restMsg"></div>
+<input type="hidden" id="minBet" value="5"/>
+<input type="hidden" id="maxBet" value="50"/>
+<input type="hidden" id="minUnit" value="1"/>
+<input type="hidden" id="decks" value="1"/>
+<input type="hidden" id="soft17" value="1"/>
+<input type="hidden" id="das" value="1"/>
+<input type="hidden" id="surr" value="1"/>
+<input type="hidden" id="peek" value="1"/>
+		  
+<script type="text/javascript" src="objects/js/jquery.gritter.min.js"></script>
+<script type="text/javascript" src="objects/js/idangerous.swiper.js"></script>
+<script type="text/javascript" src="objects/js/dragdealer.min.js"></script>
+<script type="text/javascript" src="objects/js/jstorage.min.js"></script>
+<script type="text/javascript" src="objects/js/storage.js"></script>
+<script type="text/javascript" src="objects/js/cycle.loss.js"></script>
+<script type="text/javascript" src="objects/js/fourier.js"></script>
+<script type="text/javascript" src="objects/js/cycle.history.js"></script>
+<script type="text/javascript" src="objects/js/cycle.js"></script>
+<script type="text/javascript" src="objects/js/jquery.sparkline.js"></script>
+<script type="text/javascript" src="objects/js/bjstrategy.js"></script>
+<script type="text/javascript" src="objects/js/scripts.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name='viewport'>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Blackjack Smart Bets</title>
+		
+		<link rel="stylesheet" href="objects/css/jquery.gritter.css"></link>
+		<link rel="stylesheet" href="objects/css/styles.css"></link>
+        
+        <script type="text/javascript" src="objects/js/jquery.js"></script>
+        <script type="text/javascript" src="objects/js/json2.js"></script>
+
+</head>
+
+<body>
+		
+	<div class="header_container_config">  
+			<div class="play_header">
+  				<a class="back_home" style="float:left" href="index.html" class=""></a> 
+  				<h1>
+          			<span>Game configuration</span>
+        		</h1>
+  			</div>
+  </div>	
+  
+  <div class="content config">
+    <section class="scroll_box bjbscalc">
+          <span>
+          <label for="minBet">Min bet:</label> 
+          <input type="number" id="minBet" onchange="updateTops();" value="1" min="1" /></span>
+          
+          <span>
+          <label for="maxBet">Max bet:</label> 
+          <input type="number" id="maxBet" onchange="updateTops();" value="50" /></span>
+
+          <span>
+          <label for="decks">Decks:</label> 
+          <select id="decks" onchange="ComputeStrategy()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+          </select></span>
+
+          <span>
+          <label for="soft17">Soft 17:</label> 
+          <select id="soft17" onchange="ComputeStrategy()">
+            <option value="0">Dealer Stands</option>
+            <option value="1">Dealer Hits</option>
+          </select></span>
+
+          <span>
+          <label for="das">Dbl. After Split:</label> 
+          <select id="das" onchange="ComputeStrategy()">
+            <option value="0">Allowed</option>
+            <option value="1">Not Allowed</option>
+          </select></span>
+
+          <span>
+          <label for="surr">Surrender:</label> 
+          <select id="surr" onchange="ComputeStrategy()">
+            <option value="0">Not Allowed</option>
+            <option value="1">Allowed with any dealer upcard</option>
+            <option value="2">Allowed on a dealer 2 through 10</option>
+          </select></span>
+
+          <span>
+          <label for="peek">Dealer Peek:</label> 
+          <select id="peek" onchange="ComputeStrategy()">
+            <option value="0">Dealer peeks for blackjack</option>
+            <option value="1">No peek/no hole card (European)</option>
+          </select></span>
+
+          <span>
+          <label for="minUnit">Min unit:</label> 
+          <input type="number" id="minUnit" onchange="updateTops();" value="1" /></span>
+
+    </section>
+  </div>
+  
+<script type="text/javascript" src="objects/js/jquery.gritter.min.js"></script>
+<script type="text/javascript" src="objects/js/jstorage.min.js"></script>
+<script type="text/javascript" src="objects/js/storage.js"></script>
+<script type="text/javascript" src="objects/js/cycle.loss.js"></script>
+<script type="text/javascript" src="objects/js/cycle.js"></script>
+<script type="text/javascript" src="objects/js/cycle.history.js"></script>
+<script type="text/javascript" src="objects/js/jquery.sparkline.js"></script>
+<script type="text/javascript" src="objects/js/bjstrategy.js"></script>
+<script type="text/javascript" src="objects/js/scripts.js"></script>
+ 
+</body>
+</html>

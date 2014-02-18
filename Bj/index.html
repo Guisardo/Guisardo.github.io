@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name='viewport'>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Blackjack Smart Bets</title>
+		
+		<link rel="stylesheet" href="objects/css/jquery.gritter.css"></link>
+		<link rel="stylesheet" href="objects/css/styles.css"></link>
+        
+        <script type="text/javascript" src="objects/js/jquery.js"></script>
+        <script type="text/javascript" src="objects/js/json2.js"></script>
+<style>
+body {
+margin: 0 auto;
+padding: 0;
+background: url(objects/images/home_bg.jpg) no-repeat top center;
+background-size: cover;
+}
+#home {
+text-align: center;
+position: relative;
+top: 50%;
+}
+</style>
+
+</head>
+
+<body>
+<section id="home">
+<input type="button" class="btn" id="play" value="Start" onclick="location.href='play.html';" />
+<input type="button" class="btn" id="config" value="Config" onclick="location.href='config.html';" />
+<input type="button" class="btn" id="resetLoss" value="Reset data" onclick="Storage.flush();$('#config').click();" />
+</section> 
+
+<script type="text/javascript" src="objects/js/jstorage.min.js"></script>
+<script type="text/javascript" src="objects/js/storage.js"></script>
+
+</body>
+</html>
